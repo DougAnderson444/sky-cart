@@ -9,7 +9,9 @@ const config = {
   resolve: {
     alias: {
       $config: path.resolve(__dirname, 'config.js'),
-      events: 'events/'
+      events: 'events/',
+      http: 'false',
+      https: 'false'
     }
   }
 }
