@@ -1,11 +1,11 @@
-import Stripe from 'stripe'
+import Stripe from 'stripe-cloudflare'
 import { POST } from '$routes/events/+server.js'
 import * as webhooks from '$lib/services/webhooks'
 import { request } from 'svelte-kit-test-helpers'
 
 vi.mock('$lib/services/webhooks')
 
-vi.mock('stripe', () => {
+vi.mock('stripe-cloudflare', () => {
   const Stripe = vi.fn()
 
   Stripe.prototype.webhooks = {

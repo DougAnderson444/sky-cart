@@ -1,11 +1,11 @@
 import * as sync from '$lib/services/sync'
 import * as carts from '$lib/services/cart'
 import * as webhooks from '$lib/services/webhooks'
-import Stripe from 'stripe'
+import Stripe from 'stripe-cloudflare'
 
 vi.mock('$lib/services/sync')
 vi.mock('$lib/services/cart')
-vi.mock('stripe', () => {
+vi.mock('stripe-cloudflare', () => {
   const Stripe = vi.fn()
 
   Stripe.prototype.products = {

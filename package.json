@@ -40,5 +40,8 @@
     "vite-node": "^0.23.4",
     "vitest": "^0.23.4"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "stripe-cloudflare": "^9.13.4"
+  }
 }

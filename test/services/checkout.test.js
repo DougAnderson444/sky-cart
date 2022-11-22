@@ -1,8 +1,8 @@
 import { create } from '$lib/services/checkout'
-import Stripe from 'stripe'
+import Stripe from 'stripe-cloudflare'
 import { createCart, createCartItem, createProduct, createPrice } from '$test/factories'
 
-vi.mock('stripe', () => {
+vi.mock('stripe-cloudflare', () => {
   const Stripe = vi.fn()
 
   Stripe.prototype.checkout = {

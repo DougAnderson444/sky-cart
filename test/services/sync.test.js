@@ -7,10 +7,10 @@ import {
   deletePrice
 } from '$lib/services/sync'
 import { db } from '$lib/services/db'
-import Stripe from 'stripe'
+import Stripe from 'stripe-cloudflare'
 import { createProduct, createPrice } from '$test/factories'
 
-vi.mock('stripe', () => {
+vi.mock('stripe-cloudflare', () => {
   const Stripe = vi.fn()
 
   Stripe.prototype.products = {
